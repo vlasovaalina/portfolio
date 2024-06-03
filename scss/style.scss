@@ -1,0 +1,106 @@
+@import '_colors';
+@import '_mixin';
+@import '_header';
+@import '_main';
+@import '_major';
+@import '_skills';
+@import '_subscribe';
+@import '_portfolio';
+
+// обнуление отступов
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+// Базовый шрифт и цвет текста
+body {
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    color: $color-beta;
+    font-size: 18px;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+
+.marketing {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../image/fon.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+
+
+    // .marketing__container
+    &__container {
+        height: 80vh;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: 1fr repeat(3, auto) 1fr;
+
+        row-gap: 60px;
+
+        justify-items: center;
+        align-items: center;
+    }
+
+    // .marketing__name
+
+    &__name {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+
+        font-size: 56px;
+        color: $color-alpha;
+        line-height: 1.2;
+        font-weight: lighter;
+    }
+
+    // .marketing__text
+
+    &__text {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+
+        font-size: 20px;
+        color: $color-alpha;
+        line-height: 1.2;
+        font-weight: lighter;
+        text-align: center;
+    }
+
+    // .marketing__button
+
+    &__button {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+
+        font-size: 18px;
+        color: $color-beta;
+        background-color: $color-alpha;
+        border: 1px solid $color-alpha;
+        font-weight: bold;
+
+        border-radius: 10px;
+
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 10px 40px;
+
+        &:hover {
+            background-color: transparent;
+            color: $color-alpha;
+        }
+
+    }
+}

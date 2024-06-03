@@ -1,0 +1,64 @@
+.portfolio {
+
+    display: grid;
+    grid-template-columns: 1fr minmax(1280px, 1fr) 1fr;
+    row-gap: 40px;
+
+    // .information__title
+
+    &__title {
+        grid-column: 2 / 3;
+
+        font-size: 34px;
+        color: $color-beta;
+        line-height: 1.2;
+        font-weight: lighter;
+        margin-left: 540px;
+        margin-bottom: 80px;
+    }
+
+    // .information__items
+
+    &__items {
+        grid-column: 2 / 3;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 20px;
+    }
+
+    // .information__item
+
+    &__item {
+        transition: transform 2s;
+
+        &:hover {
+            filter: brightness(160%);
+
+        }
+
+
+    }
+
+    // .information__image
+
+    &__image {
+
+        & img {
+            width: 100%;
+            filter: brightness(50%)
+        }
+    }
+
+    // .information__text
+
+    &__text {
+        color: $color-alpha;
+        position: relative;
+        top: -50%;
+        text-align: center;
+        padding: 20px;
+        font-weight: bold;
+
+    }
+}

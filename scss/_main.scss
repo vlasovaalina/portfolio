@@ -1,0 +1,26 @@
+.main {
+    display: grid;
+    grid-template-columns: 1fr minmax(1280px, 1fr) 1fr;
+    row-gap: 80px;
+
+    // .main__marketing
+    &__marketing {
+        grid-column: 1 / -1;
+    }
+
+    &__major {
+        grid-column: 2 / 3;
+    }
+
+    &__skills {
+        grid-column: 2 / 3;
+    }
+
+    &__subscribe {
+        grid-column: 2 / 3;
+    }
+
+    &__portfolio {
+        grid-column: 2 / 3;
+    }
+}

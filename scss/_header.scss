@@ -1,0 +1,47 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr minmax(280px, 1fr) minmax(1000px, 1fr) 1fr;
+    align-items: center;
+
+    background-color: $color-alpha;
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+
+    // .header__menu
+
+    &__menu {
+        grid-row: 2 / 3;
+        grid-column: 3 / 4;
+    }
+
+    // .header__list
+
+    &__list {
+        display: grid;
+        grid-auto-flow: column;
+        justify-items: end;
+        list-style: none;
+        margin-right: 310px;
+
+        li {
+            margin-left: 20px;
+        }
+
+        padding: 10px;
+    }
+
+    // .header__link
+
+    &__link {
+        text-transform: uppercase;
+        text-decoration: none;
+
+        font-size: 14px;
+
+        color: $color-beta;
+        line-height: 1.2;
+    }
+}

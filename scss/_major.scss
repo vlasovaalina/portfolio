@@ -1,0 +1,132 @@
+.major {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns:
+        1fr minmax(auto, 280px) minmax(auto, 1000px) 1fr;
+    align-items: center;
+    row-gap: 30px;
+
+    // .products__title
+    &__title {
+        grid-column: 2 / 4;
+
+        font-size: 34px;
+        color: $color-beta;
+        line-height: 1.2;
+        font-weight: lighter;
+        margin-bottom: 20px;
+        margin-left: 570px;
+    }
+
+    // .products__menu
+    &__menu {
+        grid-column: 3 / 4;
+    }
+
+    // .products__list
+    &__list {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: end;
+        column-gap: 20px;
+
+        list-style: none;
+    }
+
+    // .products__link
+    &__link {
+        // используем миксин
+        @include button;
+    }
+
+    // .products__items
+    &__items {
+        // на всю ширину
+        grid-column: 1 / -1;
+
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        margin-left: 200px;
+        margin-right: 200px;
+        column-gap: 100px;
+        row-gap: 50px;
+        margin-bottom: 85px;
+
+        // адаптивность под разрешение 1024px
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr;
+            row-gap: 50px;
+
+        }
+    }
+
+    // .products__item
+    &__item {
+        display: grid;
+
+
+        grid-template-columns: 1fr;
+        align-content: center;
+        justify-content: center;
+
+        border: 3px solid $color-psi;
+        border-radius: 18px;
+        background-color: $color-delta;
+
+        &:hover {
+            border: 3px solid $color-gamma;
+            transition: transform 2s;
+        }
+
+        transition: 0.5s all;
+    }
+
+
+
+    // .products__image
+    &__image {
+        position: relative;
+        padding: 0px 0px 20% 0px;
+
+        & img {
+            position: absolute;
+            top: 20px;
+            left: 170px;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+
+            object-fit: cover;
+        }
+    }
+
+    // .products__name
+    &__name {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        margin-top: 40px;
+        text-align: center;
+
+    }
+
+    &__reiting {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 4px;
+        margin-top: 4px;
+        text-align: center;
+
+    }
+
+
+    &__description {
+        font-size: 16px;
+        line-height: 1.2;
+        margin: 10px 10px 20px 10px;
+        align-self: start;
+    }
+
+
+}

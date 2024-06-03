@@ -1,0 +1,26 @@
+@mixin button {
+    text-decoration: none;
+    padding: 14px;
+
+    color: $color-psi;
+    border-radius: 24px;
+
+    &:hover {
+        color: $color-beta;
+        background-color: $color-gamma;
+    }
+
+    &_active {
+        color: $color-alpha;
+        background-color: $color-gamma;
+    }
+}
+
+@mixin input {
+    padding: 15px;
+    font-size: 14pt;
+    border: 2px solid $color-psi;
+    border-radius: 8px;
+
+    width: 100%;
+}
